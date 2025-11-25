@@ -18,7 +18,9 @@ export default function UnsupportedBrowserBanner() {
         }
     }, []);
 
-    return isOpen ? (
+    if (!isOpen) return undefined;
+
+    return (
         <div className="fixed bottom-[12px] left-1/2 transform -translate-x-1/2 bg-yellow-500 flex items-center justify-center p-4 rounded-lg shadow-md">
             <span className="font-sans">
                 The browser you&apos;re using may not show animations properly!
@@ -33,5 +35,5 @@ export default function UnsupportedBrowserBanner() {
                 ✖
             </span>
         </div>
-    ) : undefined;
+    );
 }

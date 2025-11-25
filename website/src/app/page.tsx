@@ -3,9 +3,8 @@
  */
 import styles from "@/app/homepage.module.css";
 import Image from "next/image";
-import UnsupportedBrowserBanner from "./firefoxbanner";
-import Footer from "./footer";
 import GetStartedButton from "./fancybutton";
+import Footer from "./footer";
 
 export default function Homepage() {
     return (
@@ -41,7 +40,8 @@ export default function Homepage() {
                 </div>
             </div>
 
-            <UnsupportedBrowserBanner />
+            {/* <UnsupportedBrowserBanner /> */}
+            {/* i disagree */}
             <div className="w-full bg-content3 px-8 py-5 flex-col flex items-center">
                 <GetStartedButton href="/docs/pico/getting-started" />
                 <div className={styles.textBody}>
